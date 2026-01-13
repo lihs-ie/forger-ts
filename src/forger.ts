@@ -7,7 +7,7 @@ export type Forger<T, P extends object> = {
   forgeMultiWithSeed: (
     size: number,
     seed: number,
-    overrides?: Partial<P>
+    overrides?: Partial<P>,
   ) => T[];
 };
 
@@ -39,14 +39,14 @@ export const Forger = <T, P extends object>(mold: Mold<T, P>): Forger<T, P> => {
 
   const forgeMulti = (
     size: number,
-    overrides: Partial<P> = {} as Partial<P>
+    overrides: Partial<P> = {} as Partial<P>,
   ): T[] => {
     return nextSeeds(size).map((seed) => mold.pour(overrides, seed));
   };
 
   const forgeWithSeed = (
     seed: number,
-    overrides: Partial<P> = {} as Partial<P>
+    overrides: Partial<P> = {} as Partial<P>,
   ): T => {
     return mold.pour(overrides, seed);
   };
@@ -54,10 +54,10 @@ export const Forger = <T, P extends object>(mold: Mold<T, P>): Forger<T, P> => {
   const forgeMultiWithSeed = (
     size: number,
     seed: number,
-    overrides: Partial<P> = {} as Partial<P>
+    overrides: Partial<P> = {} as Partial<P>,
   ): T[] => {
     return Array.from({ length: size }, (_, index) =>
-      forgeWithSeed(seed + index, overrides)
+      forgeWithSeed(seed + index, overrides),
     );
   };
 
