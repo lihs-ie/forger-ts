@@ -5,5 +5,12 @@ export default defineConfig({
     globals: true,
     include: ["tests/**/*.test.ts"],
     passWithNoTests: true,
+    coverage: {
+      enabled: true,
+      provider: "v8",
+      include: ["src/**/*.ts"],
+      exclude: ["src/index.ts"],
+      reporter: ["text", "html"],
+    },
   },
 });
