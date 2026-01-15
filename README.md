@@ -5,9 +5,9 @@ A TypeScript library for generating test data with deterministic, seed-based ran
 ## Installation
 
 ```bash
-npm install @lihs/forger-ts
+npm install @lihs-ie/forger-ts
 # or
-pnpm add @lihs/forger-ts
+pnpm add @lihs-ie/forger-ts
 ```
 
 ## Features
@@ -22,7 +22,7 @@ pnpm add @lihs/forger-ts
 ### Basic Example
 
 ```typescript
-import { Mold, Forger, StringMold } from "@lihs/forger-ts";
+import { Mold, Forger, StringMold } from "@lihs-ie/forger-ts";
 
 // Define value objects
 type UserID = { value: string };
@@ -87,7 +87,7 @@ const consistentUser = userForger.forgeWithSeed(42);
 Generate random strings with configurable length and character set.
 
 ```typescript
-import { Forger, StringMold, Characters } from "@lihs/forger-ts";
+import { Forger, StringMold, Characters } from "@lihs-ie/forger-ts";
 
 // Default: 1-255 characters, alphanumeric
 const stringForger = Forger(StringMold());
@@ -112,7 +112,7 @@ Available character sets in `Characters`:
 Generate random values from an enum or object.
 
 ```typescript
-import { Forger, EnumMold } from "@lihs/forger-ts";
+import { Forger, EnumMold } from "@lihs-ie/forger-ts";
 
 const Status = {
   Active: "active",
@@ -138,7 +138,7 @@ const activeOnly = statusForger.forge({ exclusion: exclusions });
 Generate random maps with typed keys and values.
 
 ```typescript
-import { Forger, MapMold, StringMold } from "@lihs/forger-ts";
+import { Forger, MapMold, StringMold } from "@lihs-ie/forger-ts";
 
 const keyMold = StringMold(5, 5);
 const valueMold = StringMold(10, 10);
