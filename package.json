@@ -31,6 +31,14 @@
   "engines": {
     "node": ">=24"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lihs-ie/forger-ts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lihs-ie/forger-ts/issues"
+  },
+  "homepage": "https://github.com/lihs-ie/forger-ts#readme",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
