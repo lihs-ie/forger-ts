@@ -5,9 +5,9 @@ A TypeScript library for generating test data with deterministic, seed-based ran
 ## Installation
 
 ```bash
-npm install @lihs-ie/forger-ts
+npm install -D @lihs-ie/forger-ts
 # or
-pnpm add @lihs-ie/forger-ts
+pnpm add -D @lihs-ie/forger-ts
 ```
 
 ## Features
